@@ -13,7 +13,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.healthmeter.HeartbeatWebViewScreen
 import com.example.healthmeter.LoginForm
 import com.example.healthmeter.data.model.BottomNavigation
 import com.example.healthmeter.data.model.navigationItems
@@ -161,11 +160,10 @@ fun MainNavGraph(
                 MeasurementHistoryScreenWrapper()
             }
             composable(Screen.RppgScreen.route) {
-              /*  LaunchedEffect(Unit) {
-                    context.startActivity(Intent(context, RppgScreen::class.java))
+                LaunchedEffect(Unit) {
+                    context.startActivity(Intent(context, Screen.RppgScreen::class.java))
                     navController.popBackStack() // pop so you don’t get stuck on a blank screen
-                } */
-                HeartbeatWebViewScreen(navController)
+                }
             }
             composable(Screen.BodyHealthScreen.route) {
                 BodyHealthScreen()
